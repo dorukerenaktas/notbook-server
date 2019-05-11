@@ -44,7 +44,7 @@ $ dotnet publish -c Release -o <out-path>
 
 - Build with docker
 ```shell
-$ docker build -t <your-build-name> .
+$ docker build -t <your-build-tag> .
 ```
 
 ## Contributing
