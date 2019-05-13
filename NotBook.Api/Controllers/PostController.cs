@@ -36,7 +36,7 @@ namespace NotBook.Api.Controllers
                 return new ObjectResult(new
                 {
                     StatusCode = ResponseConstants.Success,
-                    Id = postId
+                    PostId = postId
                 });
             }
             catch (Exception)
