@@ -20,7 +20,7 @@ namespace NotBook.Service.University
         {
             const string sql =
                 "SELECT UniversityIdPk AS Id, UniversityName AS Name, UniversityAbbr As Abbr, UniversityImageUrl As ImageUrl, UniversityLocation AS Location, " +
-                "(SELECT COUNT(*) FROM User WHERE UserUniversityIdFk = UniversityIdPk) AS StudentCount," +
+                "(SELECT COUNT(*) FROM User WHERE UserUniversityIdFk = UniversityIdPk AND UserIsVerified = 1) AS StudentCount," +
                 "(SELECT COUNT(*) FROM Lecture WHERE LectureUniversityIdFk = UniversityIdPk) AS LectureCount," +
                 "(SELECT COUNT(*) FROM Post WHERE PostParentIdFk = UniversityIdPk AND PostType = @postType AND PostIsDeleted != true) AS CommentCount " +
                 "FROM University " +
